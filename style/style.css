@@ -247,6 +247,12 @@ body {
   padding: 0.5em;
 }
 
+.add_info {
+  color: white;
+  margin-top: -10px;
+  font-size: 14px;
+}
+
 .todo__list,
 .todo-label {
   padding: 1em;
