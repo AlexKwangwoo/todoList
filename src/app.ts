@@ -157,20 +157,16 @@ class App {
     this.page.addChild(
       new VideoComponent("Video Title", "https://youtu.be/D7cwvvA7cP0")
     );
-    this.page.addChild(
-      new NoteComponent("Note Title", "Don't forget to code your dream")
-    );
-    this.page.addChild(new TodoComponent("Todo Title", "TypeScript Course!"));
+    this.page.addChild(new NoteComponent("Note Title", "Don't forget"));
+    this.page.addChild(new TodoComponent("Todo Title", "TypeScript"));
     this.page.addChild(
       new ImageComponent("Image Title", "https://picsum.photos/800/400")
     );
     this.page.addChild(
       new VideoComponent("Video Title", "https://youtu.be/D7cwvvA7cP0")
     );
-    this.page.addChild(
-      new NoteComponent("Note Title", "Don't forget to code your dream")
-    );
-    this.page.addChild(new TodoComponent("Todo Title", "TypeScript Course!"));
+    this.page.addChild(new NoteComponent("Note Title", "Don't forget"));
+    this.page.addChild(new TodoComponent("Todo Title", "TypeScript"));
   }
 
   private bindElementToDialog<T extends (MediaData | TextData) & Component>(
