@@ -1,6 +1,7 @@
 export interface Component {
   attachTo(parent: HTMLElement, position?: InsertPosition): void;
   removeFrom(parent: HTMLElement): void;
+  attach(component: Component, position?: InsertPosition): void;
 }
 
 // 그냥 T면 안됨 왜냐하면 T가 HTML에서만 상속받을수있게 해야하기 떄문
@@ -27,5 +28,9 @@ export class BaseComponent<T extends HTMLElement> implements Component {
       throw new Error("Parent Mismatch");
     }
     parent.removeChild(this.element);
+  }
+
+  attach(component: Component, position: InsertPosition = "afterbegin") {
+    component.attachTo(this.element, position);
   }
 }
